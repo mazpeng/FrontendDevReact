@@ -1,0 +1,43 @@
+/* navbar */
+.navbar {
+  height: 70px;
+  font-weight: 600;
+}
+
+/* .navbar-menu {
+  width: calc(100% / 3);
+} */
+.nav-title {
+  margin: 0 auto;
+  font-weight: 600;
+}
+
+.shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.dropDown {
+  background-color: aqua;
+}
+
+/* slide  */
+
+/* .carousel-container {
+  margin: 0 auto;
+  width: 1200px;
+  height: 600px;
+}
+.slide-items img {
+  width: 1200px !important;
+  height: 600px;
+}
+
+.carousel-control-prev-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.carousel-control-next-icon {
+  width: 100px;
+  height: 100px;
+} */
