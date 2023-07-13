@@ -113,8 +113,14 @@ export default function ContentLogin() {
                 Login
               </Button>
               <p>
-                Don’t have an account? <Link to="/register">Sign Up</Link> /
-                <Link to="/getPassword">Forgot Password?</Link>
+                Don’t have an account?{" "}
+                <Link className="navigate-log" to="/register">
+                  Sign Up
+                </Link>{" "}
+                /
+                <Link className="navigate-log" to="/getPassword">
+                  Forgot Password?
+                </Link>
               </p>
 
               <div className="google">

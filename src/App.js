@@ -8,6 +8,9 @@ import Footer from "./components/Footer";
 import ProductList from "./pages/secondPage";
 import { Register } from "./pages/RegisterPage";
 import ContentLogin from "./pages/LoginPage";
+import ForgotPassword from "./pages/ForgotPassword";
+import { ContentProfile } from "./pages/Profile";
+import { ContentProfileEdit } from "./pages/ProfileEdit";
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
         <Route path="/deals" element={<ProductList />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<ContentLogin />} />
+        <Route path="/getPassword" element={<ForgotPassword />} />
+        <Route path="/profile" element={<ContentProfile />} />
+        <Route path="/profileEdit" element={<ContentProfileEdit />} />
       </Routes>
       <Footer />
     </>

@@ -77,8 +77,13 @@ export const Register = () => {
                 </Button>{" "}
                 <p>
                   Forgot your password?
-                  <Link to="/getPassword">Forgot Password?</Link> /{" "}
-                  <Link to="/login">Login Here</Link>
+                  <Link className="navigate-log" to="/getPassword">
+                    Reset Here!
+                  </Link>{" "}
+                  /{" "}
+                  <Link className="navigate-log" to="/login">
+                    Login Here!
+                  </Link>
                 </p>
               </Form>
             </div>

@@ -41,43 +41,39 @@ function ProductDetailPage() {
   return (
     <>
       <div className="detail-container">
-        <div className="home-box-detail mb-3 rounded border">
-          <div className="row detail-title">
-            <div className="col-md-4">
-              <img
-                src={product.image}
-                alt={product.title}
-                style={{
-                  width: "300px",
-                  height: "380px",
-                  marginBottom: "10px",
-                  marginLeft: "10px",
-                }}
-              />
-            </div>
-            <div className="col-md-8 detail-product">
-              <Badge bg="info">New</Badge>
-              <h1 style={{ borderBottom: "1px solid black" }}>
-                {product.title}
-              </h1>
-              <p>
-                <strong>Description:</strong> {product.description}
-              </p>
-              <p>
-                <strong>Price:</strong> ${product.price}
-              </p>
-              <Button className="btn-order" variant="success">
-                Order Now
-              </Button>{" "}
-            </div>
+        <div className="detail-page">
+          <Image
+            src={product.image}
+            alt={product.title}
+            style={{
+              width: "100%",
+              maxWidth: "300px",
+              height: "auto",
+              marginBottom: "10px",
+              marginLeft: "10px",
+            }}
+          />
+
+          <div className="detail-product">
+            <Badge bg="info">New</Badge>
+            <h1 style={{ borderBottom: "1px solid black" }}>{product.title}</h1>
+            <p>
+              <strong>Description:</strong> {product.description}
+            </p>
+            <p>
+              <strong>Price:</strong> ${product.price}
+            </p>
+            <Button className="btn-order" variant="success">
+              Order Now
+            </Button>
           </div>
         </div>
         <div className="review-product">
           <h2>Review</h2>
           <div className="comment-product">
             {comments.map((comment) => (
-              <div className="comment-all">
-                <div className="comment-title" key={comment.id}>
+              <div className="comment-all" key={comment.id}>
+                <div className="comment-title">
                   <h4>
                     <Col xs={1} md={1}>
                       <Image src={icon} roundedCircle />

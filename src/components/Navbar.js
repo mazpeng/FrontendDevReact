@@ -81,7 +81,9 @@ function NavbarComponents() {
               title={isLogin ? "Logout" : "Login"}
               id="basic-nav-dropdown"
             >
-              <NavDropdown.Item href="#action/3.1">My Account</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to="/Profile">
+                My Account
+              </NavDropdown.Item>
               <NavDropdown.Item onClick={handleLogin}>
                 {isLogin ? "Logout" : "Login"}
               </NavDropdown.Item>

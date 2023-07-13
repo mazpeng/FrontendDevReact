@@ -1,13 +1,15 @@
 /* filter navigation */
 
 .filter-container {
-  margin-top: 34px;
+  background-color: #cac7cc;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
   width: 100%;
   height: auto;
-  margin-bottom: 30px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 20px;
   display: flex;
   gap: 15px;
-  display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -26,36 +28,27 @@
 }
 
 .btn-selection {
-  height: 50px;
+  height: 40px;
   display: flex;
   gap: 3px;
 }
 
-.btn .btn-primary {
-  width: 120px;
-}
 /* product page */
 .card {
-  /* Gaya kartu dasar */
-
   background-color: #f2f2f2;
   border-radius: 10px;
-  transition: transform 1s; /* Efek transisi saat ditekan */
-
-  /* Pengaturan bayangan saat kartu ditekan */
+  transition: transform 1s;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
 
 .card:active {
-  transform: scale(0.95); /* Efek perubahan skala saat ditekan */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Bayangan lebih tajam saat ditekan */
+  transform: scale(0.95);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .card:hover {
-  transform: translateY(
-    -5px
-  ); /* Efek melayang ke depan saat cursor mengarah ke kartu */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Bayangan lebih tajam saat cursor mengarah ke kartu */
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes floating {
@@ -74,7 +67,6 @@
   animation: floating 2s ease-in-out infinite; /* Efek pergerakan ke depan saat cursor mengarah ke kartu */
 }
 .card-container {
-  height: auto;
   margin: 0 auto;
   width: 65%;
   display: flex;
@@ -103,19 +95,29 @@
   width: 60%;
   height: auto;
   margin: 0 auto;
-  margin-top: 100px;
-  border-radius: 10px;
-}
-
-.home-box-detail {
-  background-color: #88818f;
-}
-
-.detail-title {
   margin-top: 50px;
-  width: 100%;
+  border: 10px;
 }
 
+.detail-page {
+  background-color: aliceblue;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+  padding-top: 10px;
+  border-radius: 20px;
+  border: 1px solid;
+  border-color: blueviolet;
+}
+
+.detail-product {
+  margin-top: 20px;
+  width: 50%;
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
 .detail-product p {
   font-weight: 400;
 }
@@ -133,7 +135,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 10px;
+  gap: 25px;
 }
 
 .comment-title {
@@ -157,7 +159,7 @@
   height: 280px;
   border-radius: 10px;
   border-color: black;
-  background-color: aliceblue;
+  background-color: rgb(218, 202, 184);
 }
 .rating {
   color: gold;
@@ -174,18 +176,22 @@
 }
 
 /* register page */
-
 /* login page */
 
+.latar {
+  width: 100%;
+  background-color: rgb(109, 109, 109);
+  padding-top: 90px;
+  height: 100vh;
+}
 .container-login {
   margin: 0 auto;
   width: 385px;
   height: 500px;
-  margin-top: 80px;
   background-color: #88818f;
   border-radius: 10px;
   border: 5px solid;
-  margin-bottom: 242px;
+
   border-color: rgb(31, 31, 32);
 }
 .form-group {
@@ -195,11 +201,11 @@
   width: 390px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 10px;
+  padding-top: 60px;
 }
 
 .form-group h1 {
-  padding-bottom: 10px;
+  padding-bottom: 0px;
   font-weight: 700;
 }
 
@@ -217,6 +223,7 @@
 .form-input p {
   font-weight: 500;
   text-align: center;
+  text-decoration: none;
 }
 .btn.btn-success {
   margin-top: 20px;
@@ -224,4 +231,39 @@
   height: 50px;
   border-radius: 10px;
   background-color: rgb(113, 48, 235);
+}
+
+.navigate-log {
+  text-decoration: none;
+  color: rgb(113, 48, 235);
+}
+
+.navigate-log:hover {
+  color: rgb(212, 2, 19);
+}
+
+/* profile */
+.profile {
+  margin-top: 40px;
+}
+
+.profile-edit {
+  background-color: gray;
+}
+
+.profile-body {
+  padding: 20px;
+}
+
+.container-xs {
+  margin-top: 40px;
+  height: 81vh;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  margin-top: 10px;
 }
