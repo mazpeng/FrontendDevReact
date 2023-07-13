@@ -163,3 +163,65 @@
   color: gold;
   font-size: 18px;
 }
+
+/* spin loading */
+.spinner-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* register page */
+
+/* login page */
+
+.container-login {
+  margin: 0 auto;
+  width: 385px;
+  height: 500px;
+  margin-top: 80px;
+  background-color: #88818f;
+  border-radius: 10px;
+  border: 5px solid;
+  margin-bottom: 242px;
+  border-color: rgb(31, 31, 32);
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 390px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+}
+
+.form-group h1 {
+  padding-bottom: 10px;
+  font-weight: 700;
+}
+
+.lupa-akun {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+}
+
+.form-input {
+  width: 250px;
+  height: 300px;
+}
+
+.form-input p {
+  font-weight: 500;
+  text-align: center;
+}
+.btn.btn-success {
+  margin-top: 20px;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  background-color: rgb(113, 48, 235);
+}

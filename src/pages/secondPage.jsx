@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, Spinner } from "react-bootstrap";
 import "../pages/global.css";
 import { useNavigate } from "react-router-dom";
 import Rating from "../components/rating";
@@ -80,7 +80,9 @@ const ProductList = () => {
             </Card>
           ))
         ) : (
-          <p>Loading data...</p>
+          <div className="spinner-container">
+            <Spinner animation="border" />
+          </div>
         )}
       </div>
     </div>

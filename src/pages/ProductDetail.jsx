@@ -31,7 +31,11 @@ function ProductDetailPage() {
   };
 
   if (!product) {
-    return <Spinner animation="border" />;
+    return (
+      <div className="spinner-container">
+        <Spinner animation="border" />
+      </div>
+    );
   }
 
   return (

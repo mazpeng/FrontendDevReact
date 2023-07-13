@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, Spinner } from "react-bootstrap";
 import "../pages/global.css";
 import { useNavigate } from "react-router-dom";
 import Rating from "../components/rating";
@@ -13,6 +13,7 @@ function ProductPage() {
   const [sortOption, setSortOption] = useState("");
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetchData();
@@ -31,8 +32,10 @@ function ProductPage() {
       const jsonData = await response.json();
       setData(jsonData);
       setFilteredData(jsonData);
+      setIsLoading(false);
     } catch (error) {
       console.log("Error fetching data:", error);
+      setIsLoading(false);
     }
   };
 
@@ -127,7 +130,7 @@ function ProductPage() {
               >
                 <option value="">All Categories</option>
                 {categories.map((category, index) => (
-                  <option key={index} value={category}>
+                  <option key={category} value={category}>
                     {category}
                   </option>
                 ))}
@@ -147,7 +150,11 @@ function ProductPage() {
           </div>
         </>
         <div className="card-container">
-          {filteredData.length > 0 ? (
+          {isLoading ? (
+            <div className="spinner-container">
+              <Spinner animation="border" />
+            </div>
+          ) : filteredData.length > 0 ? (
             filteredData.map((product) => (
               <Card
                 style={{ width: "18rem" }}
@@ -185,7 +192,7 @@ function ProductPage() {
               </Card>
             ))
           ) : (
-            <p>Loading data...</p>
+            <div>No products found.</div>
           )}
         </div>
       </div>
