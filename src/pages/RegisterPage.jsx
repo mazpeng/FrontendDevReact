@@ -100,7 +100,7 @@ export const Register = () => {
               </Modal.Header>
               <Modal.Body>
                 {success
-                  ? "Sign up Berhasil, silahkan masuk untuk melengkapi nama Anda di Profile!..."
+                  ? "Sign up Berhasil, silahkan masuk!..."
                   : error && <p className="text-danger">{error}</p>}
                 <Button onClick={() => navigate("/login")} variant="primary">
                   Login

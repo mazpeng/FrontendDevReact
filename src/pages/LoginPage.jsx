@@ -89,7 +89,7 @@ export default function ContentLogin() {
       <div className="container-login">
         <div className="form-group">
           <>
-            <h1>Sign In</h1>
+            <h1>Log In</h1>
             <div className="form-input">
               <Form.Group className="mb-3">
                 <Form.Control
