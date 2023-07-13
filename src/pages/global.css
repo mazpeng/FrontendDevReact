@@ -1,8 +1,82 @@
+/* filter navigation */
+
+.filter-container {
+  margin-top: 34px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.input-group {
+  margin-left: 30px;
+  width: 310px;
+  height: 40px;
+  gap: 3px;
+}
+
+.input-select {
+  width: 300px;
+  height: 40px;
+  gap: 3px;
+  display: flex;
+}
+
+.btn-selection {
+  height: 50px;
+  display: flex;
+  gap: 3px;
+}
+
+.btn .btn-primary {
+  width: 120px;
+}
 /* product page */
+.card {
+  /* Gaya kartu dasar */
+
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  transition: transform 1s; /* Efek transisi saat ditekan */
+
+  /* Pengaturan bayangan saat kartu ditekan */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.card:active {
+  transform: scale(0.95); /* Efek perubahan skala saat ditekan */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Bayangan lebih tajam saat ditekan */
+}
+
+.card:hover {
+  transform: translateY(
+    -5px
+  ); /* Efek melayang ke depan saat cursor mengarah ke kartu */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Bayangan lebih tajam saat cursor mengarah ke kartu */
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.card:hover {
+  animation: floating 2s ease-in-out infinite; /* Efek pergerakan ke depan saat cursor mengarah ke kartu */
+}
 .card-container {
   height: auto;
   margin: 0 auto;
-  width: 80%;
+  width: 65%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -10,8 +84,18 @@
 }
 .product-card {
   gap: 5px;
-  text-align: center;
-  align-items: center;
+}
+
+.card-img {
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.card-text {
+  margin-left: 10px;
+}
+.btn-card {
+  margin-bottom: 15px;
 }
 
 /* product-detail */
@@ -41,16 +125,41 @@
 }
 /* comment */
 .review-product {
-  width: 50%;
+  width: 100%;
 }
 
 .comment-product {
   line-height: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .comment-title {
+  width: 300px;
+  height: 250px;
+  margin: 0 auto;
   margin-top: 23px;
 }
 .comment-product h4 {
-  display: flex;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.comment-title h4 svg {
+  margin-left: 5px;
+  color: gold;
+}
+
+.comment-all {
+  width: 350px;
+  height: 280px;
+  border-radius: 10px;
+  border-color: black;
+  background-color: aliceblue;
+}
+.rating {
+  color: gold;
+  font-size: 18px;
 }

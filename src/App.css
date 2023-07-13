@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+/* secondpage */
+
+.title-deals {
+  color: blueviolet;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.title-deals h1 {
+  font-weight: 800;
+}

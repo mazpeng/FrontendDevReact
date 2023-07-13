@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Spinner, Button, Badge, Col, Image } from "react-bootstrap";
 import icon from "../images/superhero.png";
-import { BsStarFill } from "react-icons/bs";
+import Rating from "../components/rating";
 
 function ProductDetailPage() {
   const { productId } = useParams();
@@ -24,7 +24,7 @@ function ProductDetailPage() {
       const commentsData = await commentsResponse.json();
 
       setProduct(productData);
-      setComments(commentsData.slice(0, 10)); // Limit comments to the first 10 items
+      setComments(commentsData.slice(0, 9)); // Limit comments to the first 10 items
     } catch (error) {
       console.log("Error fetching data:", error);
     }
@@ -43,12 +43,17 @@ function ProductDetailPage() {
               <img
                 src={product.image}
                 alt={product.title}
-                style={{ width: "300px", marginBottom: "10px" }}
+                style={{
+                  width: "300px",
+                  height: "380px",
+                  marginBottom: "10px",
+                  marginLeft: "10px",
+                }}
               />
             </div>
             <div className="col-md-8 detail-product">
+              <Badge bg="info">New</Badge>
               <h1 style={{ borderBottom: "1px solid black" }}>
-                <Badge bg="info">New</Badge>
                 {product.title}
               </h1>
               <p>
@@ -67,17 +72,18 @@ function ProductDetailPage() {
           <h2>Review</h2>
           <div className="comment-product">
             {comments.map((comment) => (
-              <div className="comment-title" key={comment.id}>
-                <h4>
-                  {" "}
-                  <Col xs={1} md={1}>
-                    <Image src={icon} roundedCircle />
-                  </Col>
-                  {comment.name}
-                  <BsStarFill />
-                </h4>
-                <h6>Email: {comment.email}</h6>
-                <p>Comment: {comment.body}</p>
+              <div className="comment-all">
+                <div className="comment-title" key={comment.id}>
+                  <h4>
+                    <Col xs={1} md={1}>
+                      <Image src={icon} roundedCircle />
+                    </Col>
+                    {comment.name}
+                    <Rating value={comment.rating} />
+                  </h4>
+                  <h6>Email: {comment.email}</h6>
+                  <p> {comment.body}</p>
+                </div>
               </div>
             ))}
           </div>

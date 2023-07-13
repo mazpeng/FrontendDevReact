@@ -7,21 +7,21 @@ function NavbarComponents() {
     <Navbar expand="lg" className=" navbar shadow bg-body-tertiary sticky-top">
       <Container>
         <Navbar.Brand as={NavLink} to="/">
-          Shop Bestiee
+          Shop Familly
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="navbar-menu" d="basic-navbar-nav">
           <Nav className="nav-title ">
-            <Nav.Link as={NavLink} to="/home">
-              Shop Mall
+            <Nav.Link as={NavLink} to="/deals">
+              Today's Deals
             </Nav.Link>
             <Nav.Link as={NavLink} to="/">
-              Trending Brands
+              Gif Cards
             </Nav.Link>
           </Nav>
           <NavDropdown
             className="btn dropDown"
-            title="Dropdown"
+            title="Users"
             id="basic-nav-dropdown"
           >
             <NavDropdown.Item href="#action/3.1">My Account</NavDropdown.Item>

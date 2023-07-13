@@ -37,6 +37,7 @@ function MainPage() {
       </Carousel>
 
       <ProductPage />
+
       <div className="main-filter"></div>
     </>
   );
