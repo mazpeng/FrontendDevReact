@@ -26,10 +26,11 @@ export const ContentProfile = () => {
   return (
     <>
       {isLogin ? (
-        <div className="container-xl profile">
-          <div className="card profile-edit bg-secondary">
-            <div className="card-body profile-body">
+        <div className="container-profile">
+          <div className="profile-edit bg-secondary">
+            <div className="profile-body">
               <div className="row align-items-center">
+                <h1>Info Profile</h1>
                 <div className="col">
                   <h6 className="text-white mb-0">UID:</h6>
                   <p className="text-white">{users && users.uid}</p>
@@ -55,7 +56,7 @@ export const ContentProfile = () => {
               </div>
             </div>
           </div>
-          <div className="row mt-4 justify-content-center align-items-center">
+          <div className="class-btn">
             <button
               className="btn btn-secondary"
               onClick={() => navigate("/ProfileEdit")}
@@ -65,7 +66,7 @@ export const ContentProfile = () => {
           </div>
         </div>
       ) : (
-        <div className="container-xs mt-4" style={{ height: "81vh" }}>
+        <div className="container-xs " style={{ height: "81vh" }}>
           <div className="row justify-content-center align-items-center">
             <div className="col justify-content-center align-items-center">
               <div className="card">

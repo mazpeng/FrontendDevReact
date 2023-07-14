@@ -137,7 +137,11 @@ function ProductPage() {
               </select>
             </div>
             <div className="btn-selection">
-              <button className="btn btn-primary" onClick={handleFilter}>
+              <button
+                id="btn-filter"
+                className="btn btn-primary"
+                onClick={handleFilter}
+              >
                 Filter
               </button>
               <button

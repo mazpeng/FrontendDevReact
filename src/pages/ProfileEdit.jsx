@@ -51,10 +51,11 @@ export const ContentProfileEdit = () => {
   return (
     <>
       {isLogin ? (
-        <div className="container-xl profile">
-          <div className="card profile-edit bg-secondary">
-            <div className="card-body">
+        <div className="container-profile">
+          <div className="profile-edit bg-secondary">
+            <div className="profile-body">
               <div className="row align-items-center">
+                <h1>Update Profile</h1>
                 <div className="col">
                   <h6 className="text-white mb-0">UID:</h6>
                   {users && (
@@ -102,8 +103,8 @@ export const ContentProfileEdit = () => {
               </div>
             </div>
           </div>
-          <div className="row mt-4 justify-content-center align-items-center">
-            <button className="btn btn-primary" onClick={updatedata}>
+          <div className="class-btn">
+            <button className="btn btn-secondary" onClick={updatedata}>
               Submit
             </button>
           </div>

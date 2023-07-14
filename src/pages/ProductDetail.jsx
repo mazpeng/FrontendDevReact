@@ -46,8 +46,7 @@ function ProductDetailPage() {
             src={product.image}
             alt={product.title}
             style={{
-              width: "100%",
-              maxWidth: "300px",
+              maxWidth: "230px",
               height: "auto",
               marginBottom: "10px",
               marginLeft: "10px",
@@ -63,13 +62,13 @@ function ProductDetailPage() {
             <p>
               <strong>Price:</strong> ${product.price}
             </p>
-            <Button className="btn-order" variant="success">
+            <Button className="btn-order" variant="primary">
               Order Now
             </Button>
           </div>
         </div>
         <div className="review-product">
-          <h2>Review</h2>
+          <h2>REVIEW PRODUCT</h2>
           <div className="comment-product">
             {comments.map((comment) => (
               <div className="comment-all" key={comment.id}>

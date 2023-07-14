@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-import icon from "../images/main-background.jpg";
-import sales from "../images/sales.jpg";
-import stores from "../images/stores.jpg";
+import icon from "../images/stores2.png";
+import sales from "../images/sales.png";
+import stores from "../images/stores.png";
 import ProductPage from "./ProductPage";
 
 function MainPage() {
