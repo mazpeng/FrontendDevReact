@@ -42,16 +42,18 @@ function ProductDetailPage() {
     <>
       <div className="detail-container">
         <div className="detail-page">
-          <Image
-            src={product.image}
-            alt={product.title}
-            style={{
-              maxWidth: "230px",
-              height: "auto",
-              marginBottom: "10px",
-              marginLeft: "10px",
-            }}
-          />
+          <div className="image-container">
+            <Image
+              src={product.image}
+              alt={product.title}
+              style={{
+                maxWidth: "230px",
+                height: "auto",
+                marginBottom: "10px",
+                marginLeft: "10px",
+              }}
+            />
+          </div>
 
           <div className="detail-product">
             <Badge bg="info">New</Badge>

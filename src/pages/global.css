@@ -97,7 +97,7 @@
 
 /* product-detail */
 .detail-container {
-  width: 60%;
+  width: 90%;
   height: auto;
   margin: 0 auto;
   margin-top: 50px;
@@ -105,10 +105,12 @@
 }
 
 .detail-page {
+  margin: 0 auto;
+  min-width: 400px;
+  height: auto;
   background-color: aliceblue;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   padding-top: 10px;
   border-radius: 20px;
   border: 1px solid;
@@ -116,9 +118,8 @@
 }
 
 .detail-product {
-  width: 90%;
-  text-align: left;
   margin-left: 20px;
+  text-align: left;
   margin-bottom: 20px;
 }
 .detail-product p {
